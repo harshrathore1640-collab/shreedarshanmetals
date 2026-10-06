@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shree Darshan Metals — Complete Hardware & Interior Store offering plywood, laminates, louvers, veneers, bath and kitchen essentials in Sumerpur, Rajasthan.">
+<meta property="og:title" content="Shree Darshan Metals | Hardware & Interior Hub">
+<meta property="og:description" content="Plywood, laminates, louvers, veneers, bath and kitchen essentials. Trusted since 2016.">
+<meta name="theme-color" content="#17120e">
+<title>Shree Darshan Metals | Interior Hub</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0d0d0c;
+  --surface:#151513;
+  --surface2:#1c1a17;
+  --cream:#f3ede2;
+  --muted:#a9a297;
+  --gold:#c29a55;
+  --gold2:#e1bd7a;
+  --line:rgba(225,189,122,.18);
+  --max:1220px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:"DM Sans",sans-serif;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.container{width:min(var(--max),92%);margin:auto}
+.section{padding:110px 0}
+.eyebrow{color:var(--gold2);font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+h1,h2,h3{font-family:"Playfair Display",serif;line-height:1.04}
+h2{font-size:clamp(45px,6vw,78px);font-weight:600}
+.section-head{max-width:760px;margin-bottom:52px}
+.section-head p{color:var(--muted);margin-top:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+ display:inline-flex;align-items:center;justify-content:center;min-height:52px;
+ padding:0 25px;border:1px solid var(--gold);font-size:11px;
+ font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:.3s
+}
+.btn-gold{background:var(--gold);color:#17120d}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-3px)}
+.btn-outline{color:var(--cream)}
+.btn-outline:hover{background:var(--gold);color:#17120d;transform:translateY(-3px)}
+.reveal{opacity:0;transform:translateY(28px);transition:.8s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* NAV */
+nav{
+ position:fixed;top:0;left:0;width:100%;z-index:50;padding:19px 0;
+ background:rgba(13,13,12,.84);backdrop-filter:blur(12px);
+ border-bottom:1px solid rgba(255,255,255,.07)
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+ width:52px;height:52px;border:1px solid var(--gold);border-radius:50%;
+ display:grid;place-items:center;background:#e9e4da;color:#342d25;
+ font:700 22px "Playfair Display"
+}
+.brand-name{font-size:13px;font-weight:700;letter-spacing:.1em}
+.brand-name span{display:block;color:var(--gold2);font-size:9px;letter-spacing:.18em;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:27px}
+.nav-links a{font-size:11px;text-transform:uppercase;letter-spacing:.1em}
+.nav-links a:hover{color:var(--gold2)}
+.menu-btn{display:none;background:none;border:0;color:white;font-size:28px}
+
+/* HERO */
+.hero{
+ min-height:100vh;position:relative;display:flex;align-items:flex-end;
+ background:
+ linear-gradient(90deg,rgba(8,8,7,.91),rgba(8,8,7,.45) 62%,rgba(8,8,7,.68)),
+ linear-gradient(0deg,rgba(8,8,7,.9),transparent 58%),
+ url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=2200&q=90") center/cover
+}
+.hero-content{padding:180px 0 95px;max-width:900px}
+.hero h1{font-size:clamp(62px,8.8vw,122px)}
+.hero h1 span{display:block;color:var(--gold2);font-style:italic}
+.hero-sub{max-width:690px;color:#d8d2c9;font-size:17px;margin:25px 0 31px}
+.hero-note{
+ position:absolute;right:4%;bottom:35px;writing-mode:vertical-rl;
+ transform:rotate(180deg);font-size:10px;letter-spacing:.25em;
+ color:#d0c8bd;text-transform:uppercase
+}
+
+/* TRUST STRIP */
+.trust{background:#15130f;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{padding:30px 23px;border-right:1px solid var(--line)}
+.trust-item:last-child{border:0}
+.trust-item strong{display:block;font:600 29px "Playfair Display";color:var(--gold2)}
+.trust-item span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.13em}
+
+/* ABOUT */
+.about{background:#11110f}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+.about-image{height:620px;overflow:hidden}
+.about-image img{transition:1s}
+.about-image:hover img{transform:scale(1.04)}
+.about-copy p{color:var(--muted);font-size:16px;margin-bottom:18px}
+.quote{border-left:2px solid var(--gold);padding-left:18px;color:var(--gold2);font:italic 25px "Playfair Display";margin-top:28px}
+
+/* CATEGORIES */
+.categories{background:#0a0a09}
+.category-grid{
+ display:grid;grid-template-columns:repeat(3,1fr);
+ gap:1px;background:var(--line);border:1px solid var(--line)
+}
+.category{
+ background:var(--surface);min-height:285px;padding:35px;position:relative;
+ transition:.35s
+}
+.category:hover{background:#211e19}
+.category-number{color:var(--gold);font-size:11px;letter-spacing:.18em}
+.category h3{font-size:34px;margin:42px 0 13px}
+.category p{font-size:13px;color:var(--muted);max-width:370px}
+.arrow{position:absolute;right:27px;bottom:24px;color:var(--gold2);font-size:24px}
+
+/* COLLECTIONS */
+.collections{background:#17130e}
+.collection-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:300px 300px;gap:12px}
+.collection{position:relative;overflow:hidden}
+.collection:first-child{grid-row:1/3}
+.collection img{transition:.8s}
+.collection:hover img{transform:scale(1.06)}
+.collection:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.7),transparent 62%)}
+.collection-content{position:absolute;z-index:2;left:22px;bottom:19px}
+.collection-content small{font-size:9px;color:var(--gold2);text-transform:uppercase;letter-spacing:.15em}
+.collection-content h3{font-size:31px}
+
+/* PROCESS */
+.process{background:#11110f}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
+.step{padding:29px 18px;border-right:1px solid var(--line)}
+.step:last-child{border:0}
+.step strong{color:var(--gold);font-size:12px}
+.step h3{font-size:27px;margin:25px 0 9px}
+.step p{font-size:13px;color:var(--muted)}
+
+/* CTA */
+.cta{
+ padding:115px 0;
+ background:
+ linear-gradient(90deg,rgba(15,12,9,.9),rgba(15,12,9,.48)),
+ url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2200&q=85") center/cover
+}
+.cta-copy{max-width:850px}
+.cta h2{font-size:clamp(47px,6vw,82px)}
+.cta p{max-width:650px;color:#ddd7cd;margin:20px 0 30px}
+
+/* CONTACT */
+.contact{background:#0e0e0c}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px}
+.info-list{display:grid;gap:19px}
+.info{border-bottom:1px solid var(--line);padding-bottom:18px}
+.info small{display:block;color:var(--gold);font-size:10px;text-transform:uppercase;letter-spacing:.16em;margin-bottom:3px}
+.info a,.info div{font-size:18px}
+.contact-card{background:#171512;border:1px solid var(--line);padding:38px}
+.contact-card h3{font-size:38px;margin-bottom:22px}
+.form{display:grid;gap:13px}
+.form input,.form textarea{
+ width:100%;background:#0b0b09;border:1px solid #39342d;color:#fff;
+ padding:15px;font:inherit;outline:none
+}
+.form input:focus,.form textarea:focus{border-color:var(--gold)}
+.form textarea{min-height:135px;resize:vertical}
+
+/* FOOTER */
+footer{background:#070706;border-top:1px solid var(--line);padding:47px 0 27px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px}
+.footer-title{font:600 30px "Playfair Display"}
+.footer p,.footer a{font-size:12px;color:#aaa49b}
+.footer p{max-width:330px;margin-top:10px}
+.footer h4{font-size:10px;color:var(--gold2);letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px}
+.footer a{display:block;margin:8px 0}
+.footer a:hover{color:white}
+.copy{display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.1);margin-top:35px;padding-top:18px;color:#625e57;font-size:10px}
+
+/* FLOATING */
+.floating{position:fixed;right:18px;bottom:18px;z-index:70;display:flex;flex-direction:column;gap:9px}
+.float{
+ width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
+ box-shadow:0 10px 28px rgba(0,0,0,.4);font-size:19px;transition:.25s
+}
+.float:hover{transform:translateY(-4px)}
+.call{background:#1d1a15;border:1px solid #81745f;color:white}
+.wa{background:#168c54;border:1px solid #48d18b;color:white}
+
+/* MOBILE */
+@media(max-width:900px){
+ .nav-links{display:none}.menu-btn{display:block}
+ .about-grid,.contact-grid{grid-template-columns:1fr}
+ .about-image{height:470px}
+ .category-grid{grid-template-columns:1fr 1fr}
+ .collection-grid{grid-template-columns:1fr 1fr;grid-template-rows:300px 220px 220px}
+ .collection:first-child{grid-column:1/3;grid-row:1}
+ .steps{grid-template-columns:1fr 1fr}
+ .step:nth-child(2){border-right:0}
+ .step:nth-child(n+3){border-top:1px solid var(--line)}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+ .section{padding:75px 0}
+ .hero-content{padding:145px 0 80px}
+ .hero h1{font-size:60px}
+ .hero-sub{font-size:15px}
+ .hero-note{display:none}
+ .trust-grid{grid-template-columns:1fr 1fr}
+ .trust-item:nth-child(2){border-right:0}
+ .trust-item:nth-child(n+3){border-top:1px solid var(--line)}
+ .category-grid{grid-template-columns:1fr}
+ .collection-grid{grid-template-columns:1fr;grid-template-rows:auto}
+ .collection,.collection:first-child{grid-column:auto;grid-row:auto;height:280px}
+ .steps{grid-template-columns:1fr}
+ .step,.step:nth-child(2),.step:nth-child(n+3){border:0;border-bottom:1px solid var(--line)}
+ .step:last-child{border-bottom:0}
+ .footer-grid{grid-template-columns:1fr}
+ .copy{flex-direction:column}
+ .floating{right:12px;bottom:12px}
+ .float{width:48px;height:48px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+ <div class="container nav-inner">
+  <a class="brand" href="#home">
+   <div class="logo">SDM</div>
+   <div class="brand-name">SHREE DARSHAN METALS<span>INTERIOR HUB · SUMERPUR</span></div>
+  </a>
+
+  <div class="nav-links">
+   <a href="#home">Home</a>
+   <a href="#about">About</a>
+   <a href="#categories">Categories</a>
+   <a href="#collections">Showcase</a>
+   <a href="#contact">Contact</a>
+   <a class="btn btn-gold" href="https://wa.me/917023553811?text=Hello%20Shree%20Darshan%20Metals%2C%20I%20would%20like%20to%20enquire%20about%20your%20hardware%20and%20interior%20products." target="_blank">WhatsApp</a>
+  </div>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+ </div>
+</nav>
+
+<div id="mobileMenu" style="display:none;position:fixed;inset:0;background:#0d0d0c;z-index:45;padding:120px 9%;">
+ <div style="display:grid;gap:24px;font:600 39px 'Playfair Display';color:#f3ede2">
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#categories" onclick="toggleMenu()">Categories</a>
+  <a href="#collections" onclick="toggleMenu()">Showcase</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+ </div>
+</div>
+
+<header class="hero" id="home">
+ <div class="container hero-content reveal">
+  <div class="eyebrow">Complete Hardware & Interior Store · Sumerpur</div>
+  <h1>Everything for<br><span>beautiful interiors.</span></h1>
+  <p class="hero-sub">
+   Plywood, laminates, louvers, veneers, bath and kitchen essentials —
+   carefully selected products for homes, interiors and projects.
+  </p>
+  <div class="actions">
+   <a class="btn btn-gold" href="#categories">Explore Categories</a>
+   <a class="btn btn-outline" href="https://wa.me/917023553811?text=Hello%20Shree%20Darshan%20Metals%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products." target="_blank">Enquire on WhatsApp</a>
+  </div>
+ </div>
+ <div class="hero-note">Trusted Since 2016 · Interior Hub · Sumerpur</div>
+</header>
+
+<section class="trust">
+ <div class="container trust-grid">
+  <div class="trust-item"><strong>2016</strong><span>Trusted Since</span></div>
+  <div class="trust-item"><strong>6+</strong><span>Core Categories</span></div>
+  <div class="trust-item"><strong>SDM</strong><span>Interior Hub</span></div>
+  <div class="trust-item"><strong>Sumerpur</strong><span>Rajasthan</span></div>
+ </div>
+</section>
+
+<section class="section about" id="about">
+ <div class="container about-grid">
+  <div class="about-image reveal">
+   <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85" alt="Premium interior">
+  </div>
+
+  <div class="reveal">
+   <div class="eyebrow">Shree Darshan Metals · Interior Hub</div>
+   <h2>A complete destination for hardware and interior essentials.</h2>
+   <div style="height:22px"></div>
+   <p>
+    Shree Darshan Metals is positioned as a complete hardware and interior store,
+    bringing together essential materials and finishing products for residential
+    and interior requirements.
+   </p>
+   <p>
+    The store's range includes plywood, laminates, louvers, veneers, bath and
+    kitchen essentials — giving customers a convenient place to explore
+    complementary products for their spaces.
+   </p>
+   <div class="quote">“Materials that help good interiors come together.”</div>
+  </div>
+ </div>
+</section>
+
+<section class="section categories" id="categories">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="eyebrow">Product Categories</div>
+   <h2>Essential materials. Better interiors.</h2>
+   <p>Explore the core product categories presented by Shree Darshan Metals.</p>
+  </div>
+
+  <div class="category-grid reveal">
+   <article class="category">
+    <div class="category-number">01 / SURFACES</div>
+    <h3>Plywood</h3>
+    <p>Reliable board material for furniture, cabinetry, interior construction and project requirements.</p>
+    <div class="arrow">↗</div>
+   </article>
+
+   <article class="category">
+    <div class="category-number">02 / FINISHES</div>
+    <h3>Laminates</h3>
+    <p>Decorative surface finishes to bring colour, texture and personality to interior applications.</p>
+    <div class="arrow">↗</div>
+   </article>
+
+   <article class="category">
+    <div class="category-number">03 / WALLS</div>
+    <h3>Louvers</h3>
+    <p>Architectural and decorative louver solutions for contemporary interior styling.</p>
+    <div class="arrow">↗</div>
+   </article>
+
+   <article class="category">
+    <div class="category-number">04 / NATURAL</div>
+    <h3>Veneers</h3>
+    <p>Wood-inspired natural surface options for furniture, panels and refined interior spaces.</p>
+    <div class="arrow">↗</div>
+   </article>
+
+   <article class="category">
+    <div class="category-number">05 / BATH</div>
+    <h3>Bath Essentials</h3>
+    <p>Interior and bathroom essentials for creating practical, coordinated spaces.</p>
+    <div class="arrow">↗</div>
+   </article>
+
+   <article class="category">
+    <div class="category-number">06 / KITCHEN</div>
+    <h3>Kitchen Essentials</h3>
+    <p>Hardware and interior essentials that support functional and stylish kitchen spaces.</p>
+    <div class="arrow">↗</div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="section collections" id="collections">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="eyebrow">Interior Showcase</div>
+   <h2>Materials that shape the space.</h2>
+   <p>Professional visual references for surfaces, wall treatments, furniture and contemporary interiors.</p>
+  </div>
+
+  <div class="collection-grid reveal">
+   <div class="collection">
+    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85" alt="Luxury interior">
+    <div class="collection-content"><small>Interior 01</small><h3>Complete Interiors</h3></div>
+   </div>
+
+   <div class="collection">
+    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85" alt="Kitchen interior">
+    <div class="collection-content"><small>Interior 02</small><h3>Kitchen</h3></div>
+   </div>
+
+   <div class="collection">
+    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85" alt="Living interior">
+    <div class="collection-content"><small>Interior 03</small><h3>Living Spaces</h3></div>
+   </div>
+
+   <div class="collection">
+    <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1000&q=85" alt="Bathroom interior">
+    <div class="collection-content"><small>Interior 04</small><h3>Bath</h3></div>
+   </div>
+
+   <div class="collection">
+    <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1000&q=85" alt="Interior wall detail">
+    <div class="collection-content"><small>Interior 05</small><h3>Wall Details</h3></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section process">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="eyebrow">How We Help</div>
+   <h2>From requirement to the right interior material.</h2>
+  </div>
+
+  <div class="steps reveal">
+   <div class="step"><strong>01</strong><h3>Discuss</h3><p>Share your home, project or interior requirement.</p></div>
+   <div class="step"><strong>02</strong><h3>Explore</h3><p>Review suitable categories and product directions.</p></div>
+   <div class="step"><strong>03</strong><h3>Select</h3><p>Choose materials and finishes that suit the space.</p></div>
+   <div class="step"><strong>04</strong><h3>Coordinate</h3><p>Plan the products around your interior requirement.</p></div>
+   <div class="step"><strong>05</strong><h3>Complete</h3><p>Bring the selected materials into your finished interior.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="container cta-copy reveal">
+  <div class="eyebrow">Interior Hub · Sumerpur</div>
+  <h2>Building an interior? Start with the right materials.</h2>
+  <p>Connect with Shree Darshan Metals for plywood, laminates, louvers, veneers, bath and kitchen essentials.</p>
+  <div class="actions">
+   <a class="btn btn-gold" href="https://wa.me/917023553811?text=Hello%20Shree%20Darshan%20Metals%2C%20I%20want%20to%20enquire%20about%20your%20interior%20products." target="_blank">Get Product Enquiry</a>
+   <a class="btn btn-outline" href="tel:+917023553811">Call Now</a>
+  </div>
+ </div>
+</section>
+
+<section class="section contact" id="contact">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="eyebrow">Contact Shree Darshan Metals</div>
+   <h2>Let's discuss your interior requirement.</h2>
+  </div>
+
+  <div class="contact-grid">
+   <div class="info-list reveal">
+    <div class="info"><small>WhatsApp / Call</small><a href="tel:+917023553811">07023 553811</a></div>
+    <div class="info"><small>WhatsApp</small><a href="https://wa.me/917023553811" target="_blank">+91 70235 53811</a></div>
+    <div class="info"><small>Location</small><div>Jalore Circle, Near Yes Bank, Pali Road, Sumerpur, Rajasthan 306902</div></div>
+    <div class="info"><small>Instagram</small><a href="https://www.instagram.com/shree_darshan_metals_/" target="_blank">@shree_darshan_metals_</a></div>
+    <div class="info"><small>Business</small><div>Complete Hardware & Interior Store</div></div>
+   </div>
+
+   <div class="contact-card reveal">
+    <h3>Send an enquiry</h3>
+    <form class="form" onsubmit="sendWhatsApp(event)">
+     <input id="name" required placeholder="Your name">
+     <input id="phone" required type="tel" placeholder="Your phone number">
+     <input id="product" placeholder="Plywood / Laminates / Louvers / Veneers / Bath / Kitchen">
+     <textarea id="message" placeholder="Tell us what products or materials you need"></textarea>
+     <button class="btn btn-gold" type="submit">Send on WhatsApp ↗</button>
+    </form>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="container">
+  <div class="footer-grid">
+   <div>
+    <div class="footer-title">Shree Darshan Metals</div>
+    <p>Complete hardware and interior store for plywood, laminates, louvers, veneers, bath and kitchen essentials.</p>
+   </div>
+
+   <div>
+    <h4>Explore</h4>
+    <a href="#about">About</a>
+    <a href="#categories">Categories</a>
+    <a href="#collections">Showcase</a>
+    <a href="#contact">Contact</a>
+   </div>
+
+   <div>
+    <h4>Products</h4>
+    <a href="#categories">Plywood</a>
+    <a href="#categories">Laminates</a>
+    <a href="#categories">Louvers</a>
+    <a href="#categories">Veneers</a>
+    <a href="#categories">Bath & Kitchen</a>
+   </div>
+
+   <div>
+    <h4>Connect</h4>
+    <a href="tel:+917023553811">07023 553811</a>
+    <a href="https://wa.me/917023553811" target="_blank">WhatsApp</a>
+    <a href="https://www.instagram.com/shree_darshan_metals_/" target="_blank">Instagram</a>
+    <a href="https://maps.app.goo.gl/bxHPoERHpgdrKAxH9" target="_blank">Open in Maps</a>
+   </div>
+  </div>
+
+  <div class="copy">
+   <span>© <span id="year"></span> Shree Darshan Metals. All rights reserved.</span>
+   <span>Interior Hub · Sumerpur, Rajasthan</span>
+  </div>
+ </div>
+</footer>
+
+<div class="floating">
+ <a class="float call" href="tel:+917023553811" aria-label="Call Shree Darshan Metals">☎</a>
+ <a class="float wa" href="https://wa.me/917023553811?text=Hello%20Shree%20Darshan%20Metals%2C%20I%20would%20like%20to%20enquire." target="_blank" aria-label="WhatsApp Shree Darshan Metals">◉</a>
+</div>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting) entry.target.classList.add('visible');
+ });
+},{threshold:.12});
+
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+function toggleMenu(){
+ const menu=document.getElementById('mobileMenu');
+ menu.style.display=menu.style.display==='none'?'block':'none';
+}
+
+document.getElementById('year').textContent=new Date().getFullYear();
+
+function sendWhatsApp(e){
+ e.preventDefault();
+
+ const name=document.getElementById('name').value.trim();
+ const phone=document.getElementById('phone').value.trim();
+ const product=document.getElementById('product').value.trim();
+ const message=document.getElementById('message').value.trim();
+
+ const text=`Hello Shree Darshan Metals,
+
+My name is ${name}.
+Phone: ${phone}
+Product required: ${product || 'Interior / Hardware products'}
+
+Requirement:
+${message || 'I would like to know more about your products and pricing.'}`;
+
+ window.open(
+  'https://wa.me/917023553811?text='+encodeURIComponent(text),
+  '_blank'
+ );
+}
+</script>
+
+</body>
+</html>
